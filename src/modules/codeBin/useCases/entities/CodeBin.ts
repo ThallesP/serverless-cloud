@@ -26,8 +26,8 @@ export class CodeBin {
       id: id || uuidV4(),
       code_text,
       language_name,
-      created_at: created_at || dayjs().utc(),
-      updated_at: updated_at || dayjs().utc(),
+      created_at: created_at || dayjs().utc().toDate().toString(),
+      updated_at: updated_at || dayjs().utc().toDate().toString(),
     });
   }
 
@@ -37,7 +37,7 @@ export class CodeBin {
 
   language_name: string;
 
-  created_at: Date;
+  created_at: string;
 
-  updated_at: Date;
+  updated_at: string;
 }
