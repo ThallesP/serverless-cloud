@@ -7,6 +7,6 @@ describe("SaveCodeBinController", () => {
       language_name: "javascript",
     });
 
-    expect(body.language_name).toEqual("console.log('hello world')");
+    expect(body.language_name).toEqual("javascript");
   });
 });

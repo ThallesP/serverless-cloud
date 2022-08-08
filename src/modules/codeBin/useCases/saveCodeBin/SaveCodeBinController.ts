@@ -5,18 +5,15 @@ import SaveCodeBinSchema from "./SaveCodeBinSchema";
 import { InMemoryCodeBinRepository } from "../repositories/inMemory/InMemoryCodeBinRepository";
 
 export class SaveCodeBinController {
-  private saveCodeBinUseCase: SaveCodeBinUseCase;
-  constructor() {
-    this.saveCodeBinUseCase = new SaveCodeBinUseCase(
-      new InMemoryCodeBinRepository()
-    );
-  }
-
   async handle(
     request: SchemaTypeWithRequest<typeof SaveCodeBinSchema>,
     response: Response
   ) {
-    const codeBin = await this.saveCodeBinUseCase.execute(request.body);
+    const saveCodeBinUseCase = new SaveCodeBinUseCase(
+      new InMemoryCodeBinRepository()
+    );
+
+    const codeBin = await saveCodeBinUseCase.execute(request.body);
 
     return response.json(codeBin);
   }
