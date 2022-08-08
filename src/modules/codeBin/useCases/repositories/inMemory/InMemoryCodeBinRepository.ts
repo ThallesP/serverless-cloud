@@ -1,8 +1,6 @@
-import { injectable } from "tsyringe";
 import { CodeBin } from "../../entities/CodeBin";
 import { ICodeBinRepository } from "../ICodeBinRepository";
 
-@injectable()
 export class InMemoryCodeBinRepository implements ICodeBinRepository {
   private codeBins: CodeBin[] = [];
 
