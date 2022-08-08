@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      API_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+      SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
 
     steps:
       - uses: actions/checkout@v2
@@ -23,4 +23,4 @@ jobs:
           node-version: 16
 
       - name: Run tests
-        run: npx cloud test
+        run: npx @serverless/cloud test
