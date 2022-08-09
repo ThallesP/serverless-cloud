@@ -1,4 +1,4 @@
-import { InMemoryCodeBinRepository } from "../repositories/inMemory/InMemoryCodeBinRepository";
+import { InMemoryCodeBinRepository } from "../../repositories/inMemory/InMemoryCodeBinRepository";
 import { SaveCodeBinUseCase } from "./SaveCodeBinUseCase";
 
 let inMemoryCodeBinRepository: InMemoryCodeBinRepository;

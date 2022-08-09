@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { SchemaType } from "../../../../shared/http/utils/SchemaType";
-import { CodeBin } from "../entities/CodeBin";
-import { ICodeBinRepository } from "../repositories/ICodeBinRepository";
+import { CodeBin } from "../../entities/CodeBin";
+import { ICodeBinRepository } from "../../repositories/ICodeBinRepository";
 import SaveCodeBinSchema from "./SaveCodeBinSchema";
 
 interface ISaveCodeBinUseCaseResponse extends CodeBin {}
